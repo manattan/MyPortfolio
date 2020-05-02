@@ -1,0 +1,25 @@
+{
+  "name": "MyWeb",
+  "version": "1.0.0",
+  "description": "My remarkable Nuxt.js project",
+  "author": "manattan",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "contentful": "^7.14.0",
+    "nuxt": "^2.0.0",
+    "vue-scrollto": "^2.18.1"
+  },
+  "devDependencies": {},
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0",
+      "port": "3000"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+<template>
+  <section class="link">
+    <div class="list">
+      <ul>
+        <li>
+          <nuxt-link class="tab" v-scroll-to="'#Skills'" to>Skills</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link class="tab" v-scroll-to="'#Works'" to>Works</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link class="tab" v-scroll-to="'#Posts'" to>Posts</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link class="tab" v-scroll-to="'#Photos'" to>Photos</nuxt-link>
+        </li>
+        <li>
+          <a href="https://twitter.com/manattan_me" target="_blank" class="tab">Twitter</a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/takanori.mogi" target="_blank" class="tab">Facebook</a>
+        </li>
+        <li>
+          <a href="https://github.com/manattan" target="_blank" class="tab">Gitihub</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+  name: "Tabmenu"
+};
+</script>
+<style scoped>
+section {
+  display: flex;
+  width: 375px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.list {
+  margin: 0 auto;
+}
+
+ul {
+  margin-top: 3px;
+  list-style: none;
+  padding: 0 20px;
+}
+
+li {
+  line-height: 1.8;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+
+.tab {
+  text-decoration: none;
+}
+</style>
