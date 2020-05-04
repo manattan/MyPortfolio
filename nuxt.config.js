@@ -1,5 +1,5 @@
 require("dotenv").config();
-
+import contentful from "~/plugins/contentful.js";
 export default {
   mode: "universal",
   /*
