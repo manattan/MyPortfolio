@@ -39,7 +39,7 @@ section {
   margin: 0 auto;
 }
 .list {
-  max-width: 425px;
+  max-width: 500px;
   margin: 0 auto;
 }
 

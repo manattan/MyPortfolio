@@ -9,11 +9,11 @@
           <nuxt-link class="tab" v-scroll-to="'#Works'" to>Works</nuxt-link>
         </li>
         <li>
-          <nuxt-link class="tab" v-scroll-to="'#Posts'" to>Posts</nuxt-link>
+          <nuxt-link class="tab" v-scroll-to="'#Blogs'" to>Blogs</nuxt-link>
         </li>
-        <li>
+        <!-- <li>
           <nuxt-link class="tab" v-scroll-to="'#Photos'" to>Photos</nuxt-link>
-        </li>
+        </li>-->
         <li>
           <a href="https://twitter.com/manattan_me" target="_blank" class="tab">Twitter</a>
         </li>
@@ -36,7 +36,7 @@ export default {
 <style scoped>
 section {
   display: flex;
-  width: 375px;
+  max-width: 1000px;
   margin: 0 auto;
   text-align: center;
 }

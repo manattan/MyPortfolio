@@ -56,7 +56,5 @@ export default {
   display: block;
   flex-wrap: wrap;
   margin: 0 10px;
-  /* margin: 15px auto; */
-  /* text-align: center; */
 }
 </style>

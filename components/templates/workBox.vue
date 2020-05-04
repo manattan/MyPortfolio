@@ -10,8 +10,10 @@
         :tag="subContent"
       ></skillTag>
     </div>
-    <p class="time">Created: {{item.time}}</p>
-    <p class="link" v-if="item.link" :href="item.link" target="_blank">使ってみる</p>
+    <p class="time">Created: {{ item.time }}</p>
+    <a class="link" v-if="item.link" :href="item.link" target="_blank"
+      >使ってみる</a
+    >
     <div class="contents">
       <p class="box-content">{{ item.content }}</p>
       <img :ref="item.img" />
@@ -52,15 +54,19 @@ h2 {
 
 .time,
 .link {
-  padding: 2px 15px;
+  padding: 5px 15px;
 }
 
 .contents {
   margin: 0 20px;
+  padding-top: 5px;
+}
+
+.box-content {
+  font-size: 14px;
 }
 
 .title {
   display: block;
-  padding-bottom: 5px;
 }
 </style>

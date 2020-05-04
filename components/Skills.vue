@@ -27,7 +27,7 @@ export default {
         { name: "heroku" },
         { name: "Circle CI" },
         { name: "hubot" },
-        { name: "postgresSQL" }
+        { name: "postgreSQL" }
       ]
     };
   }
@@ -42,6 +42,7 @@ export default {
 
 ul {
   display: grid;
+  margin-left: 30px;
   grid-template-columns: repeat(3, 200px);
 }
 

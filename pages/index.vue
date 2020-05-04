@@ -5,8 +5,8 @@
     <Me />
     <Skills />
     <Works />
-    <Posts />
-    <Photos />
+    <Blogs :posts="postsData" />
+    <!-- <Photos /> -->
     <Footer />
   </v-container>
 </template>
@@ -17,9 +17,11 @@ import Tabmenu from "~/components/Tabmenu.vue";
 import Me from "~/components/Me.vue";
 import Skills from "~/components/Skills.vue";
 import Works from "~/components/Works.vue";
-import Posts from "~/components/Posts.vue";
-import Photos from "~/components/Photos.vue";
+import Blogs from "~/components/Blogs.vue";
+// import Photos from "~/components/Photos.vue";
 import Footer from "~/components/Footer.vue";
+
+import contentful from "~/plugins/contentful.js";
 
 export default {
   components: {
@@ -28,9 +30,16 @@ export default {
     Me,
     Skills,
     Works,
-    Posts,
-    Photos,
+    Blogs,
+    // Photos,
     Footer
+  },
+  asyncData({ params }) {
+    return contentful.getEntries({ order: "-sys.createdAt" }).then(e => {
+      return {
+        postsData: e.items
+      };
+    });
   }
 };
 </script>
