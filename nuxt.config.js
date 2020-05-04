@@ -54,18 +54,14 @@ export default {
 
   generate: {
     routes() {
-      return client
-        .getEntries({
-          content_type: process.env.CTF_BLOG_POST_TYPE_ID
-        })
-        .then(entries => {
-          return entries.items.map(entry => {
-            return {
-              route: `posts/${entry.fields.myWebSlug}`,
-              payload: entry
-            };
-          });
+      return client.getEntries().then(entries => {
+        return entries.items.map(entry => {
+          return {
+            route: `posts/${entry.fields.myWebSlug}`,
+            payload: entry
+          };
         });
+      });
     }
   },
   /*
