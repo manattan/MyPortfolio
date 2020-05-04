@@ -68,15 +68,13 @@ export default {
   },
   generate: {
     routes() {
-      return Promise.all([client.getEntries()]).then(([posts]) => {
-        return [
-          ...posts.items.map(post => {
-            return {
-              route: `blogs/${post.fields.myWebSlug}`,
-              payload: post
-            };
-          })
-        ];
+      return client.getEntries().then(posts => {
+        return posts.items.map(post => {
+          return {
+            route: `blogs/${post.fields.myWebSlug}`,
+            payload: post
+          };
+        });
       });
     }
   }
