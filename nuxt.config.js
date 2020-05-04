@@ -1,5 +1,6 @@
 require("dotenv").config();
-import client from "@/plugins/contentful.js";
+
+const client = require("./plugins/contentful.js");
 
 export default {
   mode: "universal",
@@ -41,7 +42,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ["@/plugins/vueScrollTo", "@/plugins/contentful.js"],
+  plugins: ["plugins/vueScrollTo", "plugins/contentful"],
   /*
    ** Nuxt.js dev-modules
    */
