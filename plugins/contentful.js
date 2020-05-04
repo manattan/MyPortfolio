@@ -7,4 +7,4 @@ const config = {
 
 const client = contentful.createClient(config);
 
-export default client;
+module.exports = client;
