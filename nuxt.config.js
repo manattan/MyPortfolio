@@ -1,5 +1,6 @@
 require("dotenv").config();
-import contentful from "~/plugins/contentful.js";
+import client from "@/plugins/contentful.js";
+
 export default {
   mode: "universal",
   /*
@@ -40,7 +41,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ["plugins/vueScrollTo", "plugins/contentful.js"],
+  plugins: ["@/plugins/vueScrollTo", "@/plugins/contentful.js"],
   /*
    ** Nuxt.js dev-modules
    */
@@ -52,7 +53,7 @@ export default {
 
   generate: {
     routes() {
-      return contentful
+      return client
         .getEntries({
           content_type: process.env.CTF_BLOG_POST_TYPE_ID
         })
