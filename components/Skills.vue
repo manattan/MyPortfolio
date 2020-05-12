@@ -22,10 +22,7 @@ export default {
         { name: "JavaScript (ES6)" },
         { name: "Node.js/Express" },
         { name: "Vue.js / Nuxt.js" },
-        { name: "GitHub" },
-        { name: "vagrant" },
         { name: "heroku" },
-        { name: "Circle CI" },
         { name: "hubot" },
         { name: "postgreSQL" }
       ]
@@ -38,6 +35,7 @@ export default {
 .Skills {
   width: 600px;
   margin: 0 auto;
+  font-size: 110%;
 }
 
 ul {

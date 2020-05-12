@@ -3,14 +3,16 @@
     <div>
       <div id="blogHeader">
         <div>
-          <img id="myImage" src="~/assets/myImage.png" />
+          <nuxt-link to="/">
+            <img id="myImage" src="~/assets/myImage.png" />
+          </nuxt-link>
         </div>
         <h2>もぎのブログ</h2>
       </div>
       <div id="blogContent">
         <h1 id="blogTitle">{{ post.fields.myWebTitle }}</h1>
         <p id="blogSummary">{{ post.fields.summary }}</p>
-        <a id="createdAt">Updated: {{ post.sys.updatedAt }}</a>
+        <a id="createdAt">Updated: {{ formatDate(post.sys.updatedAt) }}</a>
         <div id="sharebuttons">
           <a
             class="LINE_share"
@@ -40,10 +42,11 @@
             <img src="~/assets/Twitter.png" class="sharebutton" />
           </a>
         </div>
-        <vue-markdown id="body">{{ post.fields.body }}</vue-markdown>
+        <div class="index">Contents</div>
+        <div class="postBody" v-html="$md.render(post.fields.body)"></div>
       </div>
       <nuxt-link to="/" class="toHome">
-        <p>Home</p>
+        <span>Home</span>
       </nuxt-link>
       <Footer />
     </div>
@@ -53,41 +56,11 @@
 <script>
 import Footer from "~/components/Footer.vue";
 import contentful from "~/plugins/contentful.js";
-import VueMarkdown from "vue-markdown";
 
 export default {
   components: {
-    Footer,
-    VueMarkdown
+    Footer
   },
-
-  // head() {
-  //   return {
-  //     title: this.post.fields.myWebTitle,
-  //     meta: [
-  //       {
-  //         hid: "description",
-  //         name: "description",
-  //         content: this.post.fields.summary
-  //       },
-  //       {
-  //         hid: "og:title",
-  //         property: "og:title",
-  //         content: this.post.fields.myWebTitle
-  //       },
-  //       {
-  //         hid: "og:image",
-  //         property: "og:image",
-  //         content: this.post.fields.thumbnail.fields.file.url
-  //       },
-  //       {
-  //         hid: "og:description",
-  //         property: "og:description",
-  //         content: this.post.fields.summary
-  //       }
-  //     ]
-  //   };
-  // },
 
   async asyncData({ params }) {
     return await contentful
@@ -96,16 +69,25 @@ export default {
         "fields.myWebSlug": params.id
       })
       .then(e => {
-        console.log(e.items[0]);
+        console.log(e.items[0].fields.body);
         return {
           post: e.items[0]
         };
       });
+  },
+  methods: {
+    formatDate(iso) {
+      const date = new Date(iso);
+      const yyyy = new String(date.getFullYear());
+      const mm = new String(date.getMonth() + 1).padStart(2, "0");
+      const dd = new String(date.getDate()).padStart(2, "0");
+      return `${yyyy}.${mm}.${dd}`;
+    }
   }
 };
 </script>
 
-<style scoped>
+<style>
 #_id {
   width: 80%;
   font-family: Fira Sans, sans-serif;
@@ -142,18 +124,54 @@ export default {
   margin: 5px;
 }
 
-#body {
-  width: 70%;
+.index {
+  max-width: 400px;
   margin: 0 auto;
+  margin-bottom: -10px;
+  font-weight: bold;
+  font-size: 120%;
+}
+.table-of-contents {
+  margin: 20px auto;
+  background: #eee;
+  border: 2px solid orange;
+  color: black;
+  padding: 5px 10px;
+  max-width: 400px;
+  width: 80%;
+  text-decoration: none;
+}
+
+.table-of-contents > li {
+  padding-left: 15px;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.postBody {
+  max-width: 800px;
+  margin: 1px auto;
+}
+.postBody > h1 {
+  margin-top: 25px;
+  border-bottom: 1px solid #ccc;
+}
+h2 {
+  margin-top: 15px;
+}
+h3,
+h4 {
+  margin-top: 10px;
+}
+p {
+  margin-top: 5px;
 }
 
 .toHome {
   text-decoration: none;
-}
-
-p {
-  text-align: center;
-  margin: 20px 0;
 }
 
 @media (max-width: 500px) {

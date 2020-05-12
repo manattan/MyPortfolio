@@ -3,9 +3,9 @@
     <Top />
     <Tabmenu />
     <Me />
-    <Skills />
-    <Works />
     <Blogs :posts="postsData" />
+    <Works />
+    <Skills />
     <!-- <Photos /> -->
     <Footer />
   </v-container>

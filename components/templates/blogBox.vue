@@ -4,9 +4,9 @@
       <v-card class="mx-auto" max-width="400" tile>
         <v-card-title>{{ title }}</v-card-title>
 
-        <v-card-subtitle>updated:{{ date }}</v-card-subtitle>
+        <v-card-subtitle>updated:{{ formatDate(date) }}</v-card-subtitle>
 
-        <v-card-text>{{ summary }} </v-card-text>
+        <v-card-text class="summary">{{ summary }} </v-card-text>
       </v-card>
     </nuxt-link>
   </div>
@@ -41,6 +41,15 @@ export default {
       type: String,
       default: ""
     }
+  },
+  methods: {
+    formatDate(iso) {
+      const date = new Date(iso);
+      const yyyy = new String(date.getFullYear());
+      const mm = new String(date.getMonth() + 1).padStart(2, "0");
+      const dd = new String(date.getDate()).padStart(2, "0");
+      return `${yyyy}.${mm}.${dd}`;
+    }
   }
 };
 </script>
@@ -53,5 +62,9 @@ export default {
 
 #blogBox {
   font-weight: normal;
+}
+
+.summary {
+  text-decoration: none;
 }
 </style>
