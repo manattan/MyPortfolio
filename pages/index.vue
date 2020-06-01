@@ -6,6 +6,7 @@
     <Blogs :posts="postsData" />
     <Works />
     <Skills />
+    <Movies :movies="moviesData" />
     <!-- <Photos /> -->
     <Footer />
   </v-container>
@@ -18,6 +19,7 @@ import Me from "~/components/Me.vue";
 import Skills from "~/components/Skills.vue";
 import Works from "~/components/Works.vue";
 import Blogs from "~/components/Blogs.vue";
+import Movies from "~/components/Movies.vue";
 // import Photos from "~/components/Photos.vue";
 import Footer from "~/components/Footer.vue";
 
@@ -31,15 +33,20 @@ export default {
     Skills,
     Works,
     Blogs,
+    Movies,
     // Photos,
     Footer
   },
-  asyncData({ params }) {
-    return contentful.getEntries({ order: "-sys.createdAt" }).then(e => {
-      return {
-        postsData: e.items
-      };
-    });
+  async asyncData({ params, $axios }) {
+    const resMovies = await $axios.get(
+      "https://api.themoviedb.org/3/list/144506?api_key=832201126ea079d6282ce2a44edd623e&language=ja"
+    );
+    const resPosts = await contentful.getEntries({ order: "-sys.createdAt" });
+
+    return {
+      postsData: resPosts.items,
+      moviesData: resMovies.data.items
+    };
   }
 };
 </script>

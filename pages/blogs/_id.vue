@@ -42,12 +42,13 @@
             <img src="~/assets/Twitter.png" class="sharebutton" />
           </a>
         </div>
-        <div class="index">Contents</div>
-        <div class="postBody" v-html="$md.render(post.fields.body)"></div>
+        <div class="postBody" v-html="md.render(post.fields.body)"></div>
       </div>
-      <nuxt-link to="/" class="toHome">
-        <span>Home</span>
-      </nuxt-link>
+      <div class="toHome">
+        <nuxt-link to="/" style="text-decoration:none">
+          <span>Home</span>
+        </nuxt-link>
+      </div>
       <Footer />
     </div>
   </v-container>
@@ -56,10 +57,19 @@
 <script>
 import Footer from "~/components/Footer.vue";
 import contentful from "~/plugins/contentful.js";
+import md from "~/plugins/markdownit.js";
 
 export default {
   components: {
     Footer
+  },
+  data() {
+    return {
+      md: ""
+    };
+  },
+  created() {
+    this.md = md;
   },
 
   async asyncData({ params }) {
@@ -124,13 +134,6 @@ export default {
   margin: 5px;
 }
 
-.index {
-  max-width: 400px;
-  margin: 0 auto;
-  margin-bottom: -10px;
-  font-weight: bold;
-  font-size: 120%;
-}
 .table-of-contents {
   margin: 20px auto;
   background: #eee;
@@ -145,6 +148,7 @@ export default {
 .table-of-contents > li {
   padding-left: 15px;
   text-decoration: none;
+  color: black;
 }
 
 li {
@@ -171,7 +175,8 @@ p {
 }
 
 .toHome {
-  text-decoration: none;
+  margin-top: 20px;
+  text-align: center;
 }
 
 @media (max-width: 500px) {
