@@ -20,7 +20,7 @@ module.exports = {
       {
         hid: "og:url",
         property: "og:url",
-        content: "https://manattan.me"
+        content: "https://blog.manattan.me"
       },
       {
         hid: "og:description",
@@ -42,7 +42,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ["~/plugins/vueScrollTo"],
+  plugins: ["~/plugins/vueScrollTo", "~/plugins/markdownit"],
   /*
    ** Nuxt.js dev-modules
    */
@@ -50,19 +50,8 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-  modules: ["@nuxtjs/dotenv", "@nuxtjs/vuetify", "@nuxtjs/markdownit"],
-  markdownit: {
-    injected: true, // $mdを利用してmarkdownをhtmlにレンダリングする
-    breaks: true, // 改行コードを<br>に変換する
-    html: true, // HTML タグを有効にする
-    linkify: true, // URLに似たテキストをリンクに自動変換する
-    typography: true, // 言語に依存しないきれいな 置換 + 引用符 を有効にします。
-    use: [
-      "markdown-it-table-of-contents",
-      "markdown-it-anchor",
-      "markdown-it-mark"
-    ]
-  },
+  modules: ["@nuxtjs/dotenv", "@nuxtjs/vuetify", "@nuxtjs/axios"],
+
   generate: {
     routes() {
       return client.getEntries({ content_type: "myWebBlog" }).then(posts => {

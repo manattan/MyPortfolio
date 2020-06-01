@@ -2,7 +2,7 @@
   <v-container id="Blogs">
     <pageTitle title="Blogs" />
     <v-row justify="center">
-      <v-col v-for="(post, index) in posts" :key="index" sm="6" md="4">
+      <v-col v-for="(post, index) in posts" :key="index">
         <blogBox
           class="blog"
           :slug="post.fields.myWebSlug"

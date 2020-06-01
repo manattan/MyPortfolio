@@ -1,9 +1,11 @@
 <template>
   <section id="Works" class="works-wrapper">
     <pageTitle title="Works" />
-    <div class="Works">
-      <workBox v-for="work in works" :key="work.link" :item="work" />
-    </div>
+    <v-row justify="center">
+      <v-col v-for="work in works" :key="work.link" sm="8" md="6">
+        <workBox :item="work" />
+      </v-col>
+    </v-row>
   </section>
 </template>
 
@@ -50,11 +52,5 @@ export default {
 <style scoped>
 #Works {
   margin: 0 auto;
-}
-
-.Works {
-  display: block;
-  flex-wrap: wrap;
-  margin: 0 10px;
 }
 </style>
