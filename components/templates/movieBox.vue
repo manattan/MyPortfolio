@@ -9,7 +9,7 @@
     <div class="movieRelease">
       <p>release: {{ formatDate(movie.release_date) }}</p>
     </div>
-    <div class="movieComment">
+    <div class="movieComment" v-if="comments[num]">
       <p>{{ comments[num].comment }}</p>
     </div>
   </div>
