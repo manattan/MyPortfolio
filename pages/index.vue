@@ -3,11 +3,11 @@
     <Top />
     <Tabmenu />
     <Me />
-    <Blogs :posts="postsData" />
-    <Works />
     <Skills />
+    <Works />
+    <Blogs :posts="postsData" />
     <Movies :movies="moviesData" />
-    <!-- <Photos /> -->
+
     <Footer />
   </v-container>
 </template>
@@ -20,7 +20,6 @@ import Skills from "~/components/Skills.vue";
 import Works from "~/components/Works.vue";
 import Blogs from "~/components/Blogs.vue";
 import Movies from "~/components/Movies.vue";
-// import Photos from "~/components/Photos.vue";
 import Footer from "~/components/Footer.vue";
 
 import contentful from "~/plugins/contentful.js";
@@ -34,8 +33,13 @@ export default {
     Works,
     Blogs,
     Movies,
-    // Photos,
     Footer
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start();
+      setTimeout(() => this.$nuxt.$loading.finish(), 1000);
+    });
   },
   async asyncData({ params, $axios }) {
     const resMovies = await $axios.get(
