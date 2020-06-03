@@ -63,6 +63,31 @@ export default {
         },
         {
           comment: "主人公イケメン"
+        },
+        {
+          comment: ""
+        },
+        {
+          comment:
+            "齋藤飛鳥可愛いので2回見ました。正直最後は急展開するとこ否めなかったけど、よし。日本の恋愛映画とは結構違っていて、環境によって恋愛の感性は変化するんだろうなと感じた。"
+        },
+        {
+          comment: ""
+        },
+        {
+          comment: "盲目になっても生きれそう()"
+        },
+        {
+          comment: ""
+        },
+        {
+          comment: ""
+        },
+        {
+          comment: ""
+        },
+        {
+          comment: "ダークライイケメンすぎた"
         }
       ]
     };
@@ -80,7 +105,7 @@ export default {
 <style>
 .movieBox {
   max-width: 300px;
-  margin: 10px;
+  margin: 10px auto;
   border: 2px solid #aaa;
   border-radius: 10px;
 }
