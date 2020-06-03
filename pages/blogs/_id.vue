@@ -11,7 +11,10 @@
     <div id="blogContent">
       <h1 id="blogTitle">{{ post.fields.myWebTitle }}</h1>
       <p id="blogSummary">{{ post.fields.summary }}</p>
-      <a id="createdAt">Updated: {{ formatDate(post.sys.updatedAt) }}</a>
+      <a id="createdAt">
+        <v-icon>mdi-clock-outline</v-icon>
+        {{ formatDate(post.sys.updatedAt) }}
+      </a>
       <div id="sharebuttons">
         <a
           class="LINE_share"
@@ -165,6 +168,7 @@ export default {
 
 .table-of-contents > ul {
   padding-left: -1rem;
+  list-style: none;
 }
 
 .table-of-contents > ul > li > a {
@@ -179,6 +183,7 @@ export default {
 }
 
 .table-of-contents > ul li::before {
+  list-style: none;
   content: "\FF65";
   color: orchid;
   font-weight: bold;
@@ -188,6 +193,7 @@ export default {
 }
 
 .table-of-contents > li li::before {
+  list-style: none;
   content: "\25E6";
   color: orchid;
   display: inline-block;
