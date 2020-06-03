@@ -9,7 +9,7 @@
     <div class="movieRelease">
       <p>release: {{ formatDate(movie.release_date) }}</p>
     </div>
-    <div class="movieComment" v-show="comments[num]">
+    <div class="movieComment" v-if="comments[num]">
       <p>{{ comments[num].comment }}</p>
     </div>
   </div>
@@ -102,10 +102,10 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .movieBox {
   max-width: 300px;
-  margin: 10px auto;
+  margin: 5px auto;
   border: 2px solid #aaa;
   border-radius: 10px;
 }

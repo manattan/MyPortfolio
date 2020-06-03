@@ -12,8 +12,8 @@ const md = new MarkdownIt({
 
 md.use(mdAnchor);
 md.use(mdTOC, {
-  includeLebel: [1],
-  containerHeaderHtml: "<h3>目次</h3>"
+  includeLebel: [1, 2, 3, 4],
+  containerHeaderHtml: "<h2>目次</h2>"
 });
 
 export default md;
