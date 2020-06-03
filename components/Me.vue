@@ -1,5 +1,5 @@
 <template>
-  <section id="Me">
+  <v-col id="Me">
     <pageTitle title="About me" />
     <div>
       <div class="list">
@@ -22,7 +22,7 @@
         </ul>
       </div>
     </div>
-  </section>
+  </v-col>
 </template>
 <script>
 import pageTitle from "@/components/templates/pageTitle";

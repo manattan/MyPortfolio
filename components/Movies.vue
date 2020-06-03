@@ -1,7 +1,7 @@
 <template>
-  <section>
+  <section id="Movies">
     <pageTitle title="Movies" />
-    <v-row justify="center">
+    <v-row justify="center" class="movie">
       <v-col v-for="(movie, i) in movies" :key="i" sm="6" md="4">
         <movieBox :movie="movie" :num="i" />
       </v-col>
@@ -27,4 +27,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.movie {
+  margin: 0 auto;
+}
+</style>

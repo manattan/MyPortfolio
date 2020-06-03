@@ -17,7 +17,7 @@
           <a
             class="LINE_share"
             :href="
-              `https://social-plugins.line.me/lineit/share?url=https://manattan.me/blogs/${post.fields.myWebSlug}&text=${post.fields.myWebTitle}`
+              `https://social-plugins.line.me/lineit/share?url=https://blog.manattan.me/blogs/${post.fields.myWebSlug}&text=${post.fields.myWebTitle}`
             "
             target="_blank"
           >
@@ -26,7 +26,7 @@
           <a
             class="FB_share"
             :href="
-              `https://www.facebook.com/sharer/sharer.php?u=https://manattan.me/blogs/${post.fields.myWebSlug}`
+              `https://www.facebook.com/sharer/sharer.php?u=https://blog.manattan.me/blogs/${post.fields.myWebSlug}`
             "
             target="_blank"
           >
@@ -35,7 +35,7 @@
           <a
             class="Twitter_share"
             :href="
-              `https://twitter.com/share?url=https://manattan.me/blogs/${post.fields.myWebSlug}&text=${post.fields.myWebTitle}`
+              `https://twitter.com/share?url=https://blog.manattan.me/blogs/${post.fields.myWebSlug}&text=${post.fields.myWebTitle}`
             "
             target="_blank"
           >
