@@ -115,7 +115,9 @@ export default {
 }
 
 .movieTitle {
-  margin-top: -5px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
   text-align: center;
 }
 
@@ -124,7 +126,7 @@ export default {
 }
 
 .movieComment {
-  margin: 10px 5px;
+  margin: 10px;
   font-size: 80%;
 }
 </style>
