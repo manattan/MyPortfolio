@@ -11,9 +11,7 @@
       ></skillTag>
     </div>
     <p class="time">Created: {{ item.time }}</p>
-    <a class="link" v-if="item.link" :href="item.link" target="_blank"
-      >使ってみる</a
-    >
+    <a class="link" v-if="item.link" :href="item.link" target="_blank">使ってみる</a>
     <div class="contents">
       <p class="box-content">{{ item.content }}</p>
       <img :ref="item.img" />
@@ -40,7 +38,7 @@ export default {
 <style scoped>
 .workBox {
   max-width: 500px;
-  margin: 15px auto;
+  margin: 5px auto;
   border: 2px solid #ddd;
   border-radius: 30px;
   box-shadow: 5px 5px #ddd;
@@ -68,5 +66,10 @@ h2 {
 
 .title {
   display: block;
+}
+
+.link {
+  color: orchid;
+  text-decoration: none;
 }
 </style>

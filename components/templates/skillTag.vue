@@ -14,7 +14,8 @@ a {
   font-size: 90%;
   padding: 5px 10px;
   color: white;
-  background-color: cornflowerblue;
+  background-color: orchid;
+  opacity: 0.8;
   border-radius: 5px;
 }
 </style>

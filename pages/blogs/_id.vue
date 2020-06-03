@@ -1,56 +1,54 @@
 <template>
   <v-container id="_id">
-    <div>
-      <div id="blogHeader">
-        <div>
-          <nuxt-link to="/">
-            <img id="myImage" src="~/assets/myImage.png" />
-          </nuxt-link>
-        </div>
-        <h2>もぎのブログ</h2>
-      </div>
-      <div id="blogContent">
-        <h1 id="blogTitle">{{ post.fields.myWebTitle }}</h1>
-        <p id="blogSummary">{{ post.fields.summary }}</p>
-        <a id="createdAt">Updated: {{ formatDate(post.sys.updatedAt) }}</a>
-        <div id="sharebuttons">
-          <a
-            class="LINE_share"
-            :href="
-              `https://social-plugins.line.me/lineit/share?url=https://blog.manattan.me/blogs/${post.fields.myWebSlug}&text=${post.fields.myWebTitle}`
-            "
-            target="_blank"
-          >
-            <img src="~/assets/LINE.png" class="sharebutton" />
-          </a>
-          <a
-            class="FB_share"
-            :href="
-              `https://www.facebook.com/sharer/sharer.php?u=https://blog.manattan.me/blogs/${post.fields.myWebSlug}`
-            "
-            target="_blank"
-          >
-            <img src="~/assets/Facebook.png" class="sharebutton" />
-          </a>
-          <a
-            class="Twitter_share"
-            :href="
-              `https://twitter.com/share?url=https://blog.manattan.me/blogs/${post.fields.myWebSlug}&text=${post.fields.myWebTitle}`
-            "
-            target="_blank"
-          >
-            <img src="~/assets/Twitter.png" class="sharebutton" />
-          </a>
-        </div>
-        <div class="postBody" v-html="md.render(post.fields.body)"></div>
-      </div>
-      <div class="toHome">
-        <nuxt-link to="/" style="text-decoration:none">
-          <span>Home</span>
+    <div id="blogHeader">
+      <div>
+        <nuxt-link to="/">
+          <img id="myImage" src="~/assets/myImage.png" />
         </nuxt-link>
       </div>
-      <Footer />
+      <h2>もぎのブログ</h2>
     </div>
+    <div id="blogContent">
+      <h1 id="blogTitle">{{ post.fields.myWebTitle }}</h1>
+      <p id="blogSummary">{{ post.fields.summary }}</p>
+      <a id="createdAt">Updated: {{ formatDate(post.sys.updatedAt) }}</a>
+      <div id="sharebuttons">
+        <a
+          class="LINE_share"
+          :href="
+              `https://social-plugins.line.me/lineit/share?url=https://blog.manattan.me/blogs/${post.fields.myWebSlug}&text=${post.fields.myWebTitle}`
+            "
+          target="_blank"
+        >
+          <img src="~/assets/LINE.png" class="sharebutton" />
+        </a>
+        <a
+          class="FB_share"
+          :href="
+              `https://www.facebook.com/sharer/sharer.php?u=https://blog.manattan.me/blogs/${post.fields.myWebSlug}`
+            "
+          target="_blank"
+        >
+          <img src="~/assets/Facebook.png" class="sharebutton" />
+        </a>
+        <a
+          class="Twitter_share"
+          :href="
+              `https://twitter.com/share?url=https://blog.manattan.me/blogs/${post.fields.myWebSlug}&text=${post.fields.myWebTitle}`
+            "
+          target="_blank"
+        >
+          <img src="~/assets/Twitter.png" class="sharebutton" />
+        </a>
+      </div>
+      <div class="postBody" v-html="md.render(post.fields.body)"></div>
+    </div>
+    <div class="toHome">
+      <nuxt-link to="/" style="text-decoration:none">
+        <span>Home</span>
+      </nuxt-link>
+    </div>
+    <Footer />
   </v-container>
 </template>
 
@@ -79,7 +77,6 @@ export default {
         "fields.myWebSlug": params.id
       })
       .then(e => {
-        console.log(e.items[0].fields.body);
         return {
           post: e.items[0]
         };
@@ -97,9 +94,9 @@ export default {
 };
 </script>
 
-<style>
+<style >
 #_id {
-  width: 80%;
+  width: 70%;
   font-family: Fira Sans, sans-serif;
   overflow: hidden;
 }
@@ -134,44 +131,66 @@ export default {
   margin: 5px;
 }
 
-.table-of-contents {
-  margin: 20px auto;
-  background: #eee;
-  border: 2px solid orange;
-  color: black;
-  padding: 5px 10px;
-  max-width: 400px;
-  width: 80%;
-  text-decoration: none;
-}
-
-.table-of-contents > li {
-  padding-left: 15px;
-  text-decoration: none;
-  color: black;
-}
-
-li {
-  list-style: none;
-}
-
 .postBody {
   max-width: 800px;
   margin: 1px auto;
 }
-.postBody > h1 {
-  margin-top: 25px;
-  border-bottom: 1px solid #ccc;
+
+/* ここからpostBody */
+.postBody > h2,
+.table-of-contents > h2 {
+  background: rgb(248, 247, 244);
+  border-left: solid 5px orchid;
+  color: black;
+  margin: 15px 0;
+  padding-left: 10px;
 }
-h2 {
-  margin-top: 15px;
+.postBody > h3,
+.postBody > h4,
+.postBody > h5 {
+  margin: 15px 0 10px 5px;
+  font-weight: bold;
 }
-h3,
-h4 {
-  margin-top: 10px;
+
+.postBody > p {
+  line-height: 1.8;
+  padding: 0 10px;
 }
-p {
-  margin-top: 5px;
+
+.postBody > p > a {
+  color: black;
+  font-size: bold;
+  text-decoration: none;
+}
+
+.table-of-contents > ul {
+  padding-left: -1rem;
+}
+
+.table-of-contents > ul > li > a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px dotted orchid;
+  margin-left: 1rem;
+}
+
+.table-of-contents > a:hover {
+  color: orchid;
+}
+
+.table-of-contents > ul li::before {
+  content: "\FF65";
+  color: orchid;
+  font-weight: bold;
+  display: inline-block;
+  width: 1rem;
+  margin-left: -1rem;
+}
+
+.table-of-contents > li li::before {
+  content: "\25E6";
+  color: orchid;
+  display: inline-block;
 }
 
 .toHome {
@@ -181,10 +200,7 @@ p {
 
 @media (max-width: 500px) {
   #_id {
-    width: 90%;
-  }
-  #body {
-    width: 100%;
+    width: 95%;
   }
 }
 </style>

@@ -55,7 +55,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 v-container {
   font-size: 14px;
   background-color: #bbb;
