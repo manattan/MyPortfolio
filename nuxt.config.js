@@ -3,7 +3,7 @@ require("dotenv").config();
 const client = require("./plugins/contentful.js");
 
 module.exports = {
-  mode: "universal",
+  mode: "spa",
   /*
    ** Headers of the page
    */
@@ -34,7 +34,7 @@ module.exports = {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: "#fff" },
+  loading: { color: "orange" },
   /*
    ** Global CSS
    */

@@ -3,17 +3,14 @@
     <div class="list">
       <ul>
         <li>
-          <nuxt-link class="tab" v-scroll-to="'#Skills'" to>Skills</nuxt-link>
-        </li>
-        <li>
           <nuxt-link class="tab" v-scroll-to="'#Works'" to>Works</nuxt-link>
         </li>
         <li>
           <nuxt-link class="tab" v-scroll-to="'#Blogs'" to>Blogs</nuxt-link>
         </li>
-        <!-- <li>
-          <nuxt-link class="tab" v-scroll-to="'#Photos'" to>Photos</nuxt-link>
-        </li>-->
+        <li>
+          <nuxt-link class="tab" v-scroll-to="'#Movies'" to>Movies</nuxt-link>
+        </li>
         <li>
           <a href="https://twitter.com/manattan_me" target="_blank" class="tab">Twitter</a>
         </li>
