@@ -32,7 +32,12 @@ export default {
             { name: "Contentful" }
           ],
           link: "",
-          github: ""
+          github: [
+            {
+              url: "https://github.com/manattan/MyPortfolio",
+              name: "Client"
+            }
+          ]
         },
         {
           name: "Mr. Schedule Adjustor",
@@ -41,7 +46,12 @@ export default {
             "イベントを作成して日程調整できるアプリケーションです。全然使い物にならないので今後使えるようにしたいです。N予備校のプログラミング教材を進めながら作りました。サーバーやExpressの勉強になりました。Herokuで公開しています。",
           subContents: [{ name: "Node.js" }, { name: "Express" }],
           link: "https://afternoon-inlet-59661.herokuapp.com/",
-          github: "https://github.com/manattan/Mr.-Schedule-Adjuster"
+          github: [
+            {
+              url: "https://github.com/manattan/Mr.-Schedule-Adjuster",
+              name: "Server"
+            }
+          ]
         }
       ]
     };

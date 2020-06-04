@@ -14,6 +14,11 @@
     <a class="link" v-if="item.link" :href="item.link" target="_blank">使ってみる</a>
     <div class="contents">
       <p class="box-content">{{ item.content }}</p>
+      <ul class="github" v-if="item.github">
+        <li v-for="(content ,i) in item.github" :key="i">
+          <a :href="content.url" target="_blank">{{content.name}} &lt;/&gt; on GitHub</a>
+        </li>
+      </ul>
       <img :ref="item.img" />
     </div>
   </div>
@@ -50,9 +55,20 @@ h2 {
   padding-left: 15px;
 }
 
+.github {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.github > li > a {
+  text-decoration: none;
+  border-bottom: 1px dashed black;
+  color: black;
+}
+
 .time,
 .link {
-  padding: 5px 15px;
+  padding: 5px 15px 0 15px;
 }
 
 .contents {
