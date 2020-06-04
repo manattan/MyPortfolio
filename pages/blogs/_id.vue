@@ -161,8 +161,9 @@ export default {
 }
 
 .postBody > p > a {
-  color: black;
   font-size: bold;
+  color: black;
+  border-bottom: 1px dashed orchid;
   text-decoration: none;
 }
 
