@@ -1,23 +1,43 @@
 <template>
   <v-col id="Me">
-    <pageTitle title="About me" />
+    <pageTitle title="About Me" />
     <div>
       <div class="list">
         <ul>
           <li>
-            <span>🏫</span>
-            <span>北海道大学工学部情報エレクトロニクス学科生体情報コース</span>
+            <p>2018.04 - 2019.04 -</p>
+            <div class="el">
+              <span>🏫</span>
+              <span>北海道大学工学部情報エレクトロニクス学科生体情報コース</span>
+            </div>
           </li>
           <li>
-            <span>🏐</span>
-            <span>MATCH BOX</span>
+            <p>2018.04 -</p>
+            <div class="el">
+              <span>🏐</span>
+              <span>MATCH BOX</span>
+            </div>
           </li>
           <li>
-            <span>🌎</span>
-            <span>🇺🇸🇲🇾🇸🇬🇹🇭🇰🇭</span>
+            <p>2019.12 - 2020.01</p>
+            <div class="el">
+              <span>🇰🇭</span>
+              <span>海外ラーニングプログラム「breath」</span>
+            </div>
           </li>
           <li>
-            <span>♨👨‍💻🏐⚾️🍸🍷🍴🧖‍♂️</span>
+            <p>2020.04 -</p>
+            <div class="el">
+              <span>👨‍💻</span>
+              <span>北大IT研究会 HUIT</span>
+            </div>
+          </li>
+          <li>
+            <p>2020.06 -</p>
+            <div class="el">
+              <span>🌎</span>
+              <span>TABIPPO 札幌支部 学生staff</span>
+            </div>
           </li>
         </ul>
       </div>
@@ -49,5 +69,13 @@ ul {
 }
 li {
   list-style: none;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 80%;
+}
+.el {
+  padding-left: 1rem;
 }
 </style>
