@@ -5,6 +5,13 @@
       <div class="list">
         <ul>
           <li>
+            <p>2015.04 - 2018.03</p>
+            <div class="el">
+              <span>🏫</span>
+              <span>札幌南高校</span>
+            </div>
+          </li>
+          <li>
             <p>2018.04 - 2019.04 -</p>
             <div class="el">
               <span>🏫</span>
