@@ -46,6 +46,13 @@
               <span>TABIPPO 札幌支部 学生staff</span>
             </div>
           </li>
+          <li>
+            <p>2020.07 -</p>
+            <div class="el">
+              <span>🏢</span>
+              <span>Sapporo Incubation Hub DRIVE 学生staff</span>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
