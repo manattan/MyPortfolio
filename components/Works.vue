@@ -22,6 +22,23 @@ export default {
     return {
       works: [
         {
+          name: "TodoApp",
+          time: "2020-07",
+          content:
+            "簡単なtodoアプリを作成しました（バグとか多いのでまだデプロイしてないです）。SPAでのログイン認証がまあまあ難しかった。レイアウトはまあまあよくできた。",
+          subContents: [{ name: "Vue.js" }, { name: "Express" }],
+          github: [
+            {
+              url: "https://github.com/manattan/todo-app/tree/master/frontend",
+              name: "Client"
+            },
+            {
+              url: "https://github.com/manattan/todo-app/tree/master/backend",
+              name: "Server"
+            }
+          ]
+        },
+        {
           name: "My PortFolio Site",
           time: "2020-05",
           content:
