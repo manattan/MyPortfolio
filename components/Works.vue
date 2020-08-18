@@ -60,7 +60,7 @@ export default {
           name: "Mr. Schedule Adjustor",
           time: "2020-04",
           content:
-            "イベントを作成して日程調整できるアプリケーションです。全然使い物にならないので今後使えるようにしたいです。N予備校のプログラミング教材を進めながら作りました。サーバーやExpressの勉強になりました。Herokuで公開しています。",
+            "イベントを作成して日程調整できるアプリケーションです。全然使い物にならないので今後使えるようにしたいです。N予備校のプログラミング教材を進めながら作りました。Herokuで公開しています。",
           subContents: [{ name: "Node.js" }, { name: "Express" }],
           link: "https://afternoon-inlet-59661.herokuapp.com/",
           github: [
