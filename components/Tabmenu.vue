@@ -18,7 +18,7 @@
           <a href="https://www.facebook.com/takanori.mogi" target="_blank" class="tab">Facebook</a>
         </li>
         <li>
-          <a href="https://github.com/manattan" target="_blank" class="tab">Gitihub</a>
+          <a href="https://github.com/manattan" target="_blank" class="tab">Github</a>
         </li>
       </ul>
     </div>
