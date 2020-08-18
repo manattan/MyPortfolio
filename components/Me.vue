@@ -53,6 +53,14 @@
               <span>Sapporo Incubation Hub DRIVE 学生staff</span>
             </div>
           </li>
+          <li>
+            <p>2020.08 -</p>
+            <div class="el">
+              <span>👨‍💻</span>
+              <span>Contrea株式会社インターン(フルスタックエンジニア)
+              </span>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
