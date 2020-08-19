@@ -56,9 +56,12 @@ export default {
 
         {
           comment: "盲目になっても生きれそう()"
+<<<<<<< HEAD
         },
         {
           comment:"21歳で初めてみていろいろ思うところがあった"
+=======
+>>>>>>> 64fdf775b36b5eecaf0040fc5b9b40151bccc39e
         }
       ]
     };
