@@ -57,7 +57,7 @@
             <p>2020.08 -</p>
             <div class="el">
               <span>👨‍💻</span>
-              <span>Contrea株式会社インターン(フルスタックエンジニア)
+              <span>Contrea株式会社インターンシップ(フルスタックエンジニア)
               </span>
             </div>
           </li>
