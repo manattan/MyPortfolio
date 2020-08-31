@@ -40,13 +40,6 @@
             </div>
           </li>
           <li>
-            <p>2020.06 -</p>
-            <div class="el">
-              <span>🌎</span>
-              <span>TABIPPO 札幌支部 学生staff</span>
-            </div>
-          </li>
-          <li>
             <p>2020.07 -</p>
             <div class="el">
               <span>🏢</span>
@@ -57,7 +50,7 @@
             <p>2020.08 -</p>
             <div class="el">
               <span>👨‍💻</span>
-              <span>Contrea株式会社インターンシップ(フルスタックエンジニア)
+              <span>Contrea株式会社インターンシップ(フロントエンドエンジニア)
               </span>
             </div>
           </li>
