@@ -22,6 +22,19 @@ export default {
     return {
       works: [
         {
+          name: "Rainhate",
+          time: "2020-09",
+          content:
+            "OpenWeatherMapのAPIを定期的に叩いて、天気や風速のデータに基づいてTwitterの名前を変えていくやつです。APIの情報があまりあたらないのはご愛嬌()",
+          subContents: [{ name: "Python" }],
+          github: [
+            {
+              url: "https://github.com/manattan/Rainhate",
+              name: "Server"
+            }
+          ]
+        },
+        {
           name: "TodoApp",
           time: "2020-07",
           content:
