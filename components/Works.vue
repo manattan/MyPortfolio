@@ -22,6 +22,18 @@ export default {
     return {
       works: [
         {
+          name: "Recipippi",
+          time: "2020-10",
+          content: "Comming soon ...",
+          subContents: [{ name: "Nuxt"},{name: "firebase"}],
+          github: [
+            {
+              url: "https://github.com/manattan/Recipe",
+              name: "Client"
+            }
+          ]
+        },
+        {
           name: "Rainhate",
           time: "2020-09",
           content:
