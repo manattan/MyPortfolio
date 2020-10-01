@@ -2,16 +2,11 @@
   <section id="Skills">
     <pageTitle title="Skills" />
     <div class="Skills">
-      <v-row>
-        <v-col
-          justify="center"
+      <v-row justify="center"
           class="skill"
           v-for="(skill, index) in skills"
-          :key="index"
-          xs="2"
-          sm="6"
-          md="4"
-        >{{ skill.name }}</v-col>
+          :key="index">
+  {{ skill.name }}: {{skill.text}}
       </v-row>
     </div>
   </section>
@@ -27,12 +22,13 @@ export default {
   data() {
     return {
       skills: [
-        { name: "JavaScript (ES6)" },
-        { name: "Node.js/Express" },
-        { name: "Vue.js / Nuxt.js" },
-        { name: "heroku" },
-        { name: "hubot" },
-        { name: "postgreSQL" }
+        {name:"html/css",text:"cssのアニメーションはよく分かりません"},
+        {name:"Vue/Nuxt",text:"基礎的な部分はほぼ実装できます。"},
+        {name:"React",text:"チュートリアルを触ったことがあるぐらいです。"},
+        {name:"Node.js",text:"postgreSQLとつなげて簡単なアプリケーションを制作しました。"},
+        {name:"TypeScript",text:"Nuxtと共に使っています。"},
+        {name:"Python",text:"数値計算&グラフ化に用いたり、TwitterAPIを用いて簡単なアプリケーションを制作しました。"},
+        {name:"Firebase",text:"Firestoreとstorageは使えます。デプロイとかしたことない."}
       ]
     };
   }
@@ -42,9 +38,10 @@ export default {
 <style scoped>
 .Skills {
   margin: 0 auto;
-  font-size: 110%;
+  max-width:750px
 }
 .skill {
-  text-align: center;
+  margin:0 auto;
+  padding-top:10px
 }
 </style>
