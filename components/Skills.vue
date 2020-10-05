@@ -37,6 +37,7 @@ export default {
 
 <style scoped>
 .Skills {
+  padding:0 10px 0 10px;
   margin: 0 auto;
   max-width:750px
 }

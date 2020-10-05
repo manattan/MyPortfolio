@@ -2,7 +2,7 @@
   <section id="Works" class="works-wrapper">
     <pageTitle title="Works" />
     <v-row justify="center">
-      <v-col v-for="work in works" :key="work.link" md="4">
+      <v-col v-for="work in works" :key="work.link" md="6">
         <workBox :item="work" />
       </v-col>
     </v-row>
