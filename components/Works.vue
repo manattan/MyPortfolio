@@ -34,6 +34,22 @@ export default {
           ]
         },
         {
+          name: "宇宙のつぶやき",
+          time: "2020-10",
+          content: "NASA公式ハッカソン NASA International Space Apps Challengeにて、ISSを身近に感じることができるモバイルアプリを作成。仕様設計とフロントエンド少しに携わった。twitter認証などの機能を実装した。完成しなかった。swift難しい。",
+          subContents: [{ name: "Swift"},{name: "Express"}],
+          github: [
+            {
+              url: "https://github.com/saco-2020/tweetfromspace-front",
+              name: "Client"
+            },
+            {
+              url: "https://github.com/saco-2020/tweetfromspace-server",
+              name: "Server"
+            },
+          ]
+        },
+        {
           name: "Rainhate",
           time: "2020-09",
           content:
