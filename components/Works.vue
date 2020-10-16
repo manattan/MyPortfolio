@@ -36,7 +36,7 @@ export default {
         {
           name: "宇宙のつぶやき",
           time: "2020-10",
-          content: "NASA公式ハッカソン NASA International Space Apps Challengeにて、ISSを身近に感じることができるモバイルアプリを作成。仕様設計とフロントエンド少しに携わった。twitter認証などの機能を実装した。完成しなかった。けど2つの賞を受賞１swift難しい。",
+          content: "NASA公式ハッカソン NASA International Space Apps Challengeにて、ISSを身近に感じることができるモバイルアプリを作成。仕様設計とフロントエンド少しに携わった。twitter認証などの機能を実装した。完成しなかった。けど2つの賞を受賞した。swift難しい。web版も作成中。",
           subContents: [{ name: "Swift"},{name: "Express"}],
           github: [
             {
