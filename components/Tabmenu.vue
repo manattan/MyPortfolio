@@ -21,7 +21,7 @@
           <a href="https://github.com/manattan" target="_blank" class="tab">Github</a>
         </li>
         <li>
-          <a href="https://www.wantedly.com/users/99946394" target="_blank" class="tab">Wantedly</a>
+          <a href="https://www.wantedly.com/id/manattan" target="_blank" class="tab">Wantedly</a>
         </li>
       </ul>
     </div>

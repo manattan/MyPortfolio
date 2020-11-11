@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import imgArcana from '../assets/imgArcana.png'
 import pageTitle from "@/components/templates/pageTitle";
 import workBox from "@/components/templates/workBox";
 export default {
@@ -20,7 +21,22 @@ export default {
   },
   data() {
     return {
+      imgArcana: imgArcana,
       works: [
+        {
+          name: "arcana",
+          time: "2020-11",
+          content: "JPhacksにて、牛乳などの残量を可視化できるデバイス&アプリケーションを作成しました。フロントエンドのロジック部分を担当しました。",
+          subContents: [{ name: "Vue"},{name: "(FastAPI)"},{name: "(ESP32)"}],
+          link: 'https://objective-ptolemy-33394b.netlify.app',
+          github: [
+            {
+              url: "https://github.com/jphacks/A_2016",
+              name: "Entire Code"
+            }
+          ],
+          img: '../../assets/imgArcana.png'
+        },
         {
           name: "Recipippi",
           time: "2020-10",
@@ -67,7 +83,7 @@ export default {
           time: "2020-07",
           content:
             "簡単なtodoアプリを作成しました（バグとか多いのでまだデプロイしてないです）。SPAでのログイン認証がまあまあ難しかった。レイアウトはまあまあよくできた。",
-          subContents: [{ name: "Vue.js" }, { name: "Express" }],
+          subContents: [{ name: "Vue" }, { name: "Express" }],
           github: [
             {
               url: "https://github.com/manattan/todo-app/tree/master/frontend",
@@ -83,10 +99,9 @@ export default {
           name: "My PortFolio Site",
           time: "2020-05",
           content:
-            "このWebサイトです。Vueの知識を身につけるために色々やってみました(反映されていない可能性あり)。contentfulからブログ情報をjson形式で取り込んでいます。",
+            "このWebサイトです。Vueの知識を身につけるために色々やってみました。contentfulからブログ情報をjson形式で取り込んでいます。",
           subContents: [
-            { name: "Vue.js" },
-            { name: "Nuxt.js" },
+            { name: "Nuxt" },
             { name: "Contentful" }
           ],
           link: "",
@@ -102,7 +117,7 @@ export default {
           time: "2020-04",
           content:
             "イベントを作成して日程調整できるアプリケーションです。全然使い物にならないので今後使えるようにしたいです。N予備校のプログラミング教材を進めながら作りました。Herokuで公開しています。",
-          subContents: [{ name: "Node.js" }, { name: "Express" }],
+          subContents: [{ name: "Express" }],
           link: "https://afternoon-inlet-59661.herokuapp.com/",
           github: [
             {
