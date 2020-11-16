@@ -40,8 +40,9 @@ export default {
         {
           name: "Recipippi",
           time: "2020-10",
-          content: "Comming soon ...",
+          content: "CookpadのUI強化版を作成しました。動かなくなりました。ソースを参照してください。",
           subContents: [{ name: "Nuxt"},{name: "firebase"}],
+          link: 'https://recipe-ab8e5.web.app/',
           github: [
             {
               url: "https://github.com/manattan/Recipe",
