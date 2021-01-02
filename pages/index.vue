@@ -6,8 +6,6 @@
     <Skills />
     <Works />
     <Blogs :posts="postsData" />
-    <Movies :movies="moviesData" />
-
     <Footer />
   </v-container>
 </template>
@@ -19,7 +17,7 @@ import Me from "~/components/Me.vue";
 import Skills from "~/components/Skills.vue";
 import Works from "~/components/Works.vue";
 import Blogs from "~/components/Blogs.vue";
-import Movies from "~/components/Movies.vue";
+// import Movies from "~/components/Movies.vue";
 import Footer from "~/components/Footer.vue";
 
 import contentful from "~/plugins/contentful.js";
@@ -32,7 +30,7 @@ export default {
     Skills,
     Works,
     Blogs,
-    Movies,
+    // Movies,
     Footer
   },
   mounted() {
