@@ -3,7 +3,7 @@
     <Top />
     <Tabmenu />
     <Me />
-    <Skills />
+    <!-- <Skills /> -->
     <Works />
     <Blogs :posts="postsData" />
     <Footer />
@@ -14,7 +14,7 @@
 import Top from "~/components/Top.vue";
 import Tabmenu from "~/components/Tabmenu.vue";
 import Me from "~/components/Me.vue";
-import Skills from "~/components/Skills.vue";
+// import Skills from "~/components/Skills.vue";
 import Works from "~/components/Works.vue";
 import Blogs from "~/components/Blogs.vue";
 // import Movies from "~/components/Movies.vue";
@@ -27,7 +27,7 @@ export default {
     Top,
     Tabmenu,
     Me,
-    Skills,
+    // Skills,
     Works,
     Blogs,
     // Movies,
