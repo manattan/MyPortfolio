@@ -19,13 +19,6 @@
             </div>
           </li>
           <li>
-            <p>2018.04 -</p>
-            <div class="el">
-              <span>🏐</span>
-              <span>MATCH BOX</span>
-            </div>
-          </li>
-          <li>
             <p>2019.12 - 2020.01</p>
             <div class="el">
               <span>🇰🇭</span>
@@ -50,7 +43,15 @@
             <p>2020.08 -</p>
             <div class="el">
               <span>👨‍💻</span>
-              <span>Contrea株式会社インターンシップ(フロントエンドエンジニア)
+              <span>Contrea株式会社インターン(フロントエンドエンジニア)
+              </span>
+            </div>
+          </li>
+          <li>
+            <p>2020.12 -</p>
+            <div class="el">
+              <span>👨‍💻</span>
+              <span>株式会社filductインターン(フロントエンドエンジニア)
               </span>
             </div>
           </li>
