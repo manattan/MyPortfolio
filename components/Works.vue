@@ -2,7 +2,7 @@
   <section id="Works" class="works-wrapper">
     <pageTitle title="Works" />
     <v-row justify="center">
-      <v-col v-for="work in works" :key="work.link" md="6">
+      <v-col v-for="work in works" :key="work.link" cols="12" sm="6">
         <workBox :item="work" />
       </v-col>
     </v-row>
@@ -54,14 +54,19 @@ export default {
           name: "宇宙のつぶやき",
           time: "2020-10",
           content: "NASA公式ハッカソン NASA International Space Apps Challengeにて、ISSを身近に感じることができるモバイルアプリを作成。仕様設計とフロントエンド少しに携わった。twitter認証などの機能を実装した。完成しなかった。けど2つの賞を受賞した。swift難しい。web版も作成中。",
-          subContents: [{ name: "Swift"},{name: "Express"}],
+          subContents: [{ name: "React"},{ name: "Swift"},{name: "Express"}],
+          link: "https://space.manattan.me",
           github: [
             {
-              url: "https://github.com/saco-2020/tweetfromspace-front",
-              name: "Client"
+              url: "https://github.com/manattan/tweet-from-space-web",
+              name: "Web"
             },
             {
-              url: "https://github.com/saco-2020/tweetfromspace-server",
+              url: "https://github.com/saco-2020/tweetfromspace-front",
+              name: "IOS"
+            },
+            {
+              url: "https://github.com/manattan/tweet-from-space-server",
               name: "Server"
             },
           ]
