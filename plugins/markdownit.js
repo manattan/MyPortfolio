@@ -16,4 +16,4 @@ md.use(mdTOC, {
   containerHeaderHtml: "<h2>目次</h2>"
 });
 
-export default md;
+export {md};

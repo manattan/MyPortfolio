@@ -1,6 +1,6 @@
 <template>
   <div id="Footer">
-    <p>2020 @manattan</p>
+    <p>2020 All rights reserved. @manattan</p>
   </div>
 </template>
 

@@ -13,7 +13,7 @@
       <p id="blogSummary">{{ post.fields.summary }}</p>
       <a id="createdAt">
         <v-icon>mdi-clock-outline</v-icon>
-        {{ formatDate(post.sys.updatedAt) }}
+        {{ formatDate(post.sys.createdAt) }}
       </a>
       <div id="sharebuttons">
         <a
@@ -44,7 +44,7 @@
           <img src="~/assets/Twitter.png" class="sharebutton" />
         </a>
       </div>
-      <div class="postBody" v-html="md.render(post.fields.body)"></div>
+      <div class="postBody" v-html="body"></div>
     </div>
     <div class="toHome">
       <nuxt-link to="/" style="text-decoration:none">
@@ -58,33 +58,31 @@
 <script>
 import Footer from "~/components/Footer.vue";
 import contentful from "~/plugins/contentful.js";
-import md from "~/plugins/markdownit.js";
+import {md} from "~/plugins/markdownit.js";
 
 export default {
   components: {
     Footer
   },
-  data() {
-    return {
-      md: ""
-    };
-  },
-  created() {
-    this.md = md;
-  },
 
-  async asyncData({ params }) {
-    return await contentful
+  async asyncData(
+    {params}
+  ){
+    try {
+      const res = await contentful
       .getEntries({
         content_type: "myWebBlog",
         "fields.myWebSlug": params.id
       })
-      .then(e => {
-        return {
-          post: e.items[0]
-        };
-      });
+      return {
+        post: res.items[0],
+        body: md.render(res.items[0].fields.body)
+      }
+    } catch(e) {
+      console.error(e)
+    }
   },
+
   methods: {
     formatDate(iso) {
       const date = new Date(iso);
@@ -137,6 +135,7 @@ export default {
 .postBody {
   max-width: 800px;
   margin: 1px auto;
+  user-select: none;
 }
 
 /* ここからpostBody */
@@ -146,7 +145,7 @@ export default {
   border-left: solid 5px orchid;
   color: black;
   margin: 15px 0;
-  padding-left: 10px;
+  padding: 3px 0 3px 10px;
 }
 .postBody > h3,
 .postBody > h4,
@@ -155,10 +154,26 @@ export default {
   font-weight: bold;
 }
 
+.postBody > h3 {
+  border-bottom: 5px solid pink;
+  width: 100%;
+  max-width: 300px;
+}
+
+.postBody > blockquote {
+  margin: 20px;
+  padding: 15px;
+  font-size: 90%;
+  /* font-weight: bold; */
+  /* border: 5px pink solid; */
+  background-color: rgb(228, 225, 225);
+}
+
 .postBody > p {
   line-height: 1.8;
-  padding: 0 10px;
+  margin: 10px 0 10px 0
 }
+
 
 .postBody > p > a {
   font-size: bold;
@@ -167,15 +182,19 @@ export default {
   text-decoration: none;
 }
 
-.table-of-contents > ul {
-  padding-left: -1rem;
-  list-style: none;
+.postBody > ul {
+    margin: 20px
+}
+
+.table-of-contents > ul > li::marker, 
+ .table-of-contents > ul > li::before {
+  content: none !important;
 }
 
 .table-of-contents > ul > li > a {
   text-decoration: none;
   color: black;
-  border-bottom: 2px dotted orchid;
+  border-bottom: 3px orchid solid;
   margin-left: 1rem;
 }
 

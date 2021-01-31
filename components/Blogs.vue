@@ -9,7 +9,7 @@
           :id="post.sys.id"
           :title="post.fields.myWebTitle"
           :summary="post.fields.summary"
-          :date="post.sys.updatedAt"
+          :date="post.sys.createdAt"
         />
       </v-col>
     </v-row>

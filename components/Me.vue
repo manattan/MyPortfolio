@@ -15,7 +15,7 @@
             <p>2018.04 - 2019.04 -</p>
             <div class="el">
               <span>🏫</span>
-              <span>北海道大学工学部情報エレクトロニクス学科生体情報コース</span>
+              <span>北海道大学工学部情報エレクトロニクス学科生体情報コース<br/>&nbsp;&nbsp;&nbsp;&nbsp;情報生物学研究室所属</span>
             </div>
           </li>
           <li>
@@ -33,14 +33,14 @@
             </div>
           </li>
           <li>
-            <p>2020.07 -</p>
+            <p>2020.07 - 2021.03</p>
             <div class="el">
               <span>🏢</span>
               <span>Sapporo Incubation Hub DRIVE 学生staff</span>
             </div>
           </li>
           <li>
-            <p>2020.08 -</p>
+            <p>2020.08 - 2021.03</p>
             <div class="el">
               <span>👨‍💻</span>
               <span>Contrea株式会社インターン(フロントエンドエンジニア)

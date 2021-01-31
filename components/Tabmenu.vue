@@ -9,9 +9,6 @@
           <nuxt-link class="tab" v-scroll-to="'#Blogs'" to>Blogs</nuxt-link>
         </li>
         <li>
-          <nuxt-link class="tab" v-scroll-to="'#Movies'" to>Movies</nuxt-link>
-        </li>
-        <li>
           <a href="https://twitter.com/manattan_me" target="_blank" class="tab">Twitter</a>
         </li>
         <li>

@@ -24,9 +24,21 @@ export default {
       imgArcana: imgArcana,
       works: [
         {
+          name: "NPBscraper",
+          time: "2021-01",
+          content: "背番号の歴史をスクレイピング -> いい感じの文字列に変更 -> postgreSQL に保存",
+          subContents: [{ name: "Python"}],
+          github: [
+            {
+              url: "https://github.com/manattan/scraper-npb",
+              name: "Entire Code"
+            }
+          ],
+        },
+        {
           name: "arcana",
           time: "2020-11",
-          content: "JPhacksにて、牛乳などの残量を可視化できるデバイス&アプリケーションを作成しました。フロントエンドのロジック部分を担当しました。",
+          content: "JPhacks にて、牛乳などの残量を可視化できるデバイス&アプリケーションを作成しました。フロントエンドのロジック部分を担当しました。",
           subContents: [{ name: "Vue"},{name: "(FastAPI)"},{name: "(ESP32)"}],
           link: 'https://objective-ptolemy-33394b.netlify.app',
           github: [
@@ -35,25 +47,12 @@ export default {
               name: "Entire Code"
             }
           ],
-          img: '../../assets/imgArcana.png'
-        },
-        {
-          name: "Recipippi",
-          time: "2020-10",
-          content: "CookpadのUI強化版を作成しました。動かなくなりました。ソースを参照してください。",
-          subContents: [{ name: "Nuxt"},{name: "firebase"}],
-          link: 'https://recipe-ab8e5.web.app/',
-          github: [
-            {
-              url: "https://github.com/manattan/Recipe",
-              name: "Client"
-            }
-          ]
+          // img: '../../assets/imgArcana.png'
         },
         {
           name: "宇宙のつぶやき",
           time: "2020-10",
-          content: "NASA公式ハッカソン NASA International Space Apps Challengeにて、ISSを身近に感じることができるモバイルアプリを作成。仕様設計とフロントエンド少しに携わった。twitter認証などの機能を実装した。完成しなかった。けど2つの賞を受賞した。swift難しい。web版も作成中。",
+          content: "NASA 公式ハッカソン NASA International Space Apps Challengeにて、ISS を身近に感じることができるモバイルアプリを作成。仕様設計とフロントエンド少しに携わった。twitter 認証などの機能を実装した。完成しなかった。けど2つの賞を受賞した。swift 難しい。web 版も作成中。",
           subContents: [{ name: "React"},{ name: "Swift"},{name: "Express"}],
           link: "https://space.manattan.me",
           github: [

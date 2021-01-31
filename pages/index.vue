@@ -4,8 +4,8 @@
     <Tabmenu />
     <Me />
     <!-- <Skills /> -->
-    <Works />
     <Blogs :posts="postsData" />
+    <Works />
     <Footer />
   </v-container>
 </template>
