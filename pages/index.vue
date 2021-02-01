@@ -26,7 +26,7 @@ export default {
     Me,
     Works,
     Blogs,
-    Footer
+    Footer,
   },
   mounted() {
     this.$nextTick(() => {

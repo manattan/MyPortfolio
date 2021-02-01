@@ -1,13 +1,19 @@
 <template>
   <div id="blogBox">
-      <v-card max-width="400" class="mx-auto card">
-        <nuxt-link :to="href" class="text">
-        <v-card-title><p>{{ title }}</p></v-card-title>
-    </nuxt-link>
-        <v-card-subtitle><p>created: {{ formatDate(date) }}</p></v-card-subtitle>
+    <v-card max-width="400" class="mx-auto card">
+      <nuxt-link :to="href" class="text">
+        <v-card-title
+          ><p>{{ title }}</p></v-card-title
+        >
+      </nuxt-link>
+      <v-card-subtitle
+        ><p>created: {{ formatDate(date) }}</p></v-card-subtitle
+      >
 
-        <v-card-text class="summary"><p>{{ summary }}</p></v-card-text>
-      </v-card>
+      <v-card-text class="summary"
+        ><p>{{ summary }}</p></v-card-text
+      >
+    </v-card>
   </div>
 </template>
 
@@ -59,8 +65,8 @@ export default {
   text-decoration: none !important;
 }
 .card {
-  margin:0 auto;
-  text-decoration: none !important
+  margin: 0 auto;
+  text-decoration: none !important;
 }
 
 .text {
