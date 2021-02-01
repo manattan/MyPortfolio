@@ -34,12 +34,7 @@ export default {
     });
   },
   async asyncData({ params, $axios }) {
-    const tmdbkey = process.env.TMDB_APIKEY;
-    const resMovies = await $axios.get(
-      `https://api.themoviedb.org/3/list/144506?api_key=${tmdbkey}&language=ja`
-    );
     const resPosts = await contentful.getEntries({ order: "-sys.createdAt" });
-
     return {
       postsData: resPosts.items,
       moviesData: resMovies.data.items,
