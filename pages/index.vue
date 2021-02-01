@@ -26,6 +26,7 @@ export default {
     Me,
     Works,
     Blogs,
+    Footer
   },
   mounted() {
     this.$nextTick(() => {
@@ -37,7 +38,6 @@ export default {
     const resPosts = await contentful.getEntries({ order: "-sys.createdAt" });
     return {
       postsData: resPosts.items,
-      moviesData: resMovies.data.items,
     };
   },
 };

@@ -1,14 +1,13 @@
 <template>
   <div id="blogBox">
-    <nuxt-link :to="href">
-      <v-card class="mx-auto" max-width="400" tile>
-        <v-card-title>{{ title }}</v-card-title>
-
-        <v-card-subtitle>updated:{{ formatDate(date) }}</v-card-subtitle>
-
-        <v-card-text class="summary">{{ summary }} </v-card-text>
-      </v-card>
+      <v-card max-width="400" class="mx-auto card">
+        <nuxt-link :to="href" class="text">
+        <v-card-title><p>{{ title }}</p></v-card-title>
     </nuxt-link>
+        <v-card-subtitle><p>created: {{ formatDate(date) }}</p></v-card-subtitle>
+
+        <v-card-text class="summary"><p>{{ summary }}</p></v-card-text>
+      </v-card>
   </div>
 </template>
 
@@ -55,16 +54,16 @@ export default {
 </script>
 
 <style scoped>
-.mx-auto {
-  margin: 10px auto;
-  border-radius: 20px;
-}
-
 #blogBox {
   font-weight: normal;
+  text-decoration: none !important;
+}
+.card {
+  margin:0 auto;
+  text-decoration: none !important
 }
 
-.summary {
+.text {
   text-decoration: none;
 }
 </style>

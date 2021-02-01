@@ -12,7 +12,7 @@ export default {
 <style scoped>
 #Footer {
   margin-bottom: 12px;
-  margin-top: 0;
+  margin-top: 20px;
 }
 p {
   text-align: center;
