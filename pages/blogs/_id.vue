@@ -18,27 +18,21 @@
       <div id="sharebuttons">
         <a
           class="LINE_share"
-          :href="
-              `https://social-plugins.line.me/lineit/share?url=https://blog.manattan.me/blogs/${post.fields.myWebSlug}&text=${post.fields.myWebTitle}`
-            "
+          :href="`https://social-plugins.line.me/lineit/share?url=https://blog.manattan.me/blogs/${post.fields.myWebSlug}&text=${post.fields.myWebTitle}`"
           target="_blank"
         >
           <img src="~/assets/LINE.png" class="sharebutton" />
         </a>
         <a
           class="FB_share"
-          :href="
-              `https://www.facebook.com/sharer/sharer.php?u=https://blog.manattan.me/blogs/${post.fields.myWebSlug}`
-            "
+          :href="`https://www.facebook.com/sharer/sharer.php?u=https://blog.manattan.me/blogs/${post.fields.myWebSlug}`"
           target="_blank"
         >
           <img src="~/assets/Facebook.png" class="sharebutton" />
         </a>
         <a
           class="Twitter_share"
-          :href="
-              `https://twitter.com/share?url=https://blog.manattan.me/blogs/${post.fields.myWebSlug}&text=${post.fields.myWebTitle}`
-            "
+          :href="`https://twitter.com/share?url=https://blog.manattan.me/blogs/${post.fields.myWebSlug}&text=${post.fields.myWebTitle}`"
           target="_blank"
         >
           <img src="~/assets/Twitter.png" class="sharebutton" />
@@ -47,7 +41,7 @@
       <div class="postBody" v-html="body"></div>
     </div>
     <div class="toHome">
-      <nuxt-link to="/" style="text-decoration:none">
+      <nuxt-link to="/" style="text-decoration: none">
         <span>Home</span>
       </nuxt-link>
     </div>
@@ -58,28 +52,25 @@
 <script>
 import Footer from "~/components/Footer.vue";
 import contentful from "~/plugins/contentful.js";
-import {md} from "~/plugins/markdownit.js";
+import { md } from "~/plugins/markdownit.js";
 
 export default {
   components: {
-    Footer
+    Footer,
   },
 
-  async asyncData(
-    {params}
-  ){
+  async asyncData({ params }) {
     try {
-      const res = await contentful
-      .getEntries({
+      const res = await contentful.getEntries({
         content_type: "myWebBlog",
-        "fields.myWebSlug": params.id
-      })
+        "fields.myWebSlug": params.id,
+      });
       return {
         post: res.items[0],
-        body: md.render(res.items[0].fields.body)
-      }
-    } catch(e) {
-      console.error(e)
+        body: md.render(res.items[0].fields.body),
+      };
+    } catch (e) {
+      console.error(e);
     }
   },
 
@@ -90,12 +81,12 @@ export default {
       const mm = new String(date.getMonth() + 1).padStart(2, "0");
       const dd = new String(date.getDate()).padStart(2, "0");
       return `${yyyy}.${mm}.${dd}`;
-    }
-  }
+    },
+  },
 };
 </script>
 
-<style >
+<style>
 #_id {
   width: 70%;
   font-family: Fira Sans, sans-serif;
@@ -171,9 +162,8 @@ export default {
 
 .postBody > p {
   line-height: 1.8;
-  margin: 10px 0 10px 0
+  margin: 10px 0 10px 0;
 }
-
 
 .postBody > p > a {
   font-size: bold;
@@ -183,11 +173,11 @@ export default {
 }
 
 .postBody > ul {
-    margin: 20px
+  margin: 20px;
 }
 
-.table-of-contents > ul > li::marker, 
- .table-of-contents > ul > li::before {
+.table-of-contents > ul > li::marker,
+.table-of-contents > ul > li::before {
   content: none !important;
 }
 

@@ -17,30 +17,30 @@ export default {
   name: "blogBox",
   data() {
     return {
-      href: `/blogs/${this.slug}`
+      href: `/blogs/${this.slug}`,
     };
   },
   props: {
     slug: {
       type: String,
-      default: ""
+      default: "",
     },
     id: {
       type: String,
-      default: ""
+      default: "",
     },
     title: {
       type: String,
-      default: ""
+      default: "",
     },
     summary: {
       type: String,
-      default: ""
+      default: "",
     },
     date: {
       type: String,
-      default: ""
-    }
+      default: "",
+    },
   },
   methods: {
     formatDate(iso) {
@@ -49,8 +49,8 @@ export default {
       const mm = new String(date.getMonth() + 1).padStart(2, "0");
       const dd = new String(date.getDate()).padStart(2, "0");
       return `${yyyy}.${mm}.${dd}`;
-    }
-  }
+    },
+  },
 };
 </script>
 

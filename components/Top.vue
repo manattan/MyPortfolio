@@ -9,11 +9,11 @@
 
 <script>
 export default {
-  name: "Top"
+  name: "Top",
 };
 </script>
 
-<style  scoped>
+<style scoped>
 #imgSec {
   text-align: center;
   margin: 20px 10px 10px 10px;

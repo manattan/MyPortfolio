@@ -17,13 +17,13 @@ export default {
   name: "Movies",
   components: {
     pageTitle,
-    movieBox
+    movieBox,
   },
   props: {
     movies: {
-      type: Array
-    }
-  }
+      type: Array,
+    },
+  },
 };
 </script>
 

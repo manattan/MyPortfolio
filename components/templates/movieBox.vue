@@ -20,48 +20,47 @@ export default {
   name: "movieCard",
   props: {
     movie: {
-      type: Object
+      type: Object,
     },
     num: {
-      type: Number
-    }
+      type: Number,
+    },
   },
   data() {
     return {
       comments: [
         {
-          comment: ""
+          comment: "",
         },
         {
           comment:
-            "パーカー君がオススメしてたので観た。スラム街の怖さを感じた（一昔前だけど）。"
+            "パーカー君がオススメしてたので観た。スラム街の怖さを感じた（一昔前だけど）。",
         },
         {
-          comment: "ガチでどんな話かわからなかったので誰か見て"
+          comment: "ガチでどんな話かわからなかったので誰か見て",
         },
         {
-          comment: "こんな恋愛したい"
+          comment: "こんな恋愛したい",
         },
         {
-          comment: ""
+          comment: "",
         },
         {
-          comment: "主人公イケメン"
+          comment: "主人公イケメン",
         },
 
         {
           comment:
-            "齋藤飛鳥可愛いので2回見ました。正直最後は急展開するとこ否めなかったけど、よし。日本の恋愛映画とは結構違っていて、環境によって恋愛の感性は変化するんだろうなと感じた。"
+            "齋藤飛鳥可愛いので2回見ました。正直最後は急展開するとこ否めなかったけど、よし。日本の恋愛映画とは結構違っていて、環境によって恋愛の感性は変化するんだろうなと感じた。",
         },
 
         {
-          comment: "盲目になっても生きれそう()"
-
+          comment: "盲目になっても生きれそう()",
         },
         {
-          comment:"21歳で初めてみていろいろ思うところがあった。"
-        }
-      ]
+          comment: "21歳で初めてみていろいろ思うところがあった。",
+        },
+      ],
     };
   },
   methods: {
@@ -69,8 +68,8 @@ export default {
       const date = new Date(iso);
       const yyyy = new String(date.getFullYear());
       return `${yyyy}`;
-    }
-  }
+    },
+  },
 };
 </script>
 

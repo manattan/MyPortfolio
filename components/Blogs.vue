@@ -24,11 +24,10 @@ export default {
   name: "Blogs",
   components: {
     pageTitle,
-    blogBox
+    blogBox,
   },
-  props: ["posts"]
+  props: ["posts"],
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

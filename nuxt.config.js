@@ -15,21 +15,21 @@ module.exports = {
       {
         hid: "description",
         name: "description",
-        content: "もぎたかのりのポートフォリオサイトです。"
+        content: "もぎたかのりのポートフォリオサイトです。",
       },
       {
         hid: "og:url",
         property: "og:url",
-        content: "blog.manattan.me"
+        content: "blog.manattan.me",
       },
       {
         hid: "og:description",
         property: "og:description",
-        content: "もぎたかのりのポートフォリオサイトです。"
+        content: "もぎたかのりのポートフォリオサイトです。",
       },
-      { name: "twitter:card", content: "summary" }
+      { name: "twitter:card", content: "summary" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
   /*
    ** Customize the progress-bar color
@@ -54,22 +54,22 @@ module.exports = {
 
   generate: {
     routes() {
-      return client.getEntries({ content_type: "myWebBlog" }).then(posts => {
-        return posts.items.map(post => {
+      return client.getEntries({ content_type: "myWebBlog" }).then((posts) => {
+        return posts.items.map((post) => {
           return {
             route: `blogs/${post.fields.myWebSlug}`,
-            payload: post
+            payload: post,
           };
         });
       });
-    }
+    },
   },
   env: {
     // contentful
     CTF_SPACE_ID: process.env.CTF_SPACE_ID,
     CTF_BLOG_POST_TYPE_ID: process.env.CTF_BLOG_POST_TYPE_ID,
     CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN,
-    TMDB_APIKEY: process.env.TMDB_APIKEY
+    TMDB_APIKEY: process.env.TMDB_APIKEY,
   },
   /*
    ** Build configuration
@@ -78,6 +78,6 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
-  }
+    extend(config, ctx) {},
+  },
 };

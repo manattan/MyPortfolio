@@ -11,12 +11,16 @@
       ></skillTag>
     </div>
     <p class="time">Created: {{ item.time }}</p>
-    <a class="link" v-if="item.link" :href="item.link" target="_blank">使ってみる</a>
+    <a class="link" v-if="item.link" :href="item.link" target="_blank"
+      >使ってみる</a
+    >
     <div class="contents">
       <p class="box-content">{{ item.content }}</p>
       <ul class="github" v-if="item.github">
-        <li v-for="(content ,i) in item.github" :key="i">
-          <a :href="content.url" target="_blank">{{content.name}} &lt;/&gt; on GitHub</a>
+        <li v-for="(content, i) in item.github" :key="i">
+          <a :href="content.url" target="_blank"
+            >{{ content.name }} &lt;/&gt; on GitHub</a
+          >
         </li>
       </ul>
       <img :ref="item.img" />
@@ -31,12 +35,12 @@ export default {
   props: {
     item: {
       type: Object,
-      default: () => {}
-    }
+      default: () => {},
+    },
   },
   components: {
-    skillTag
-  }
+    skillTag,
+  },
 };
 </script>
 

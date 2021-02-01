@@ -15,7 +15,9 @@
             <p>2018.04 - 2019.04 -</p>
             <div class="el">
               <span>🏫</span>
-              <span>北海道大学工学部情報エレクトロニクス学科生体情報コース<br/>&nbsp;&nbsp;&nbsp;&nbsp;情報生物学研究室所属</span>
+              <span
+                >北海道大学工学部情報エレクトロニクス学科生体情報コース<br />&nbsp;&nbsp;&nbsp;&nbsp;情報生物学研究室所属</span
+              >
             </div>
           </li>
           <li>
@@ -33,26 +35,24 @@
             </div>
           </li>
           <li>
-            <p>2020.07 - 2021.03</p>
+            <p>2020.07 - 2021.02</p>
             <div class="el">
               <span>🏢</span>
               <span>Sapporo Incubation Hub DRIVE 学生staff</span>
             </div>
           </li>
           <li>
-            <p>2020.08 - 2021.03</p>
+            <p>2020.08 - 2021.02</p>
             <div class="el">
               <span>👨‍💻</span>
-              <span>Contrea株式会社インターン(フロントエンドエンジニア)
-              </span>
+              <span>Contrea株式会社インターン(フロントエンドエンジニア) </span>
             </div>
           </li>
           <li>
             <p>2020.12 -</p>
             <div class="el">
               <span>👨‍💻</span>
-              <span>株式会社filductインターン(フロントエンドエンジニア)
-              </span>
+              <span>株式会社filductインターン(フロントエンドエンジニア) </span>
             </div>
           </li>
         </ul>
@@ -65,8 +65,8 @@ import pageTitle from "@/components/templates/pageTitle";
 export default {
   name: "Me",
   components: {
-    pageTitle
-  }
+    pageTitle,
+  },
 };
 </script>
 

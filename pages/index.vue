@@ -3,7 +3,6 @@
     <Top />
     <Tabmenu />
     <Me />
-    <!-- <Skills /> -->
     <Blogs :posts="postsData" />
     <Works />
     <Footer />
@@ -14,10 +13,8 @@
 import Top from "~/components/Top.vue";
 import Tabmenu from "~/components/Tabmenu.vue";
 import Me from "~/components/Me.vue";
-// import Skills from "~/components/Skills.vue";
 import Works from "~/components/Works.vue";
 import Blogs from "~/components/Blogs.vue";
-// import Movies from "~/components/Movies.vue";
 import Footer from "~/components/Footer.vue";
 
 import contentful from "~/plugins/contentful.js";
@@ -27,11 +24,8 @@ export default {
     Top,
     Tabmenu,
     Me,
-    // Skills,
     Works,
     Blogs,
-    // Movies,
-    Footer
   },
   mounted() {
     this.$nextTick(() => {
@@ -48,9 +42,9 @@ export default {
 
     return {
       postsData: resPosts.items,
-      moviesData: resMovies.data.items
+      moviesData: resMovies.data.items,
     };
-  }
+  },
 };
 </script>
 

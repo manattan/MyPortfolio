@@ -9,16 +9,30 @@
           <nuxt-link class="tab" v-scroll-to="'#Blogs'" to>Blogs</nuxt-link>
         </li>
         <li>
-          <a href="https://twitter.com/manattan_me" target="_blank" class="tab">Twitter</a>
+          <a href="https://twitter.com/manattan_me" target="_blank" class="tab"
+            >Twitter</a
+          >
         </li>
         <li>
-          <a href="https://www.facebook.com/takanori.mogi" target="_blank" class="tab">Facebook</a>
+          <a
+            href="https://www.facebook.com/takanori.mogi"
+            target="_blank"
+            class="tab"
+            >Facebook</a
+          >
         </li>
         <li>
-          <a href="https://github.com/manattan" target="_blank" class="tab">Github</a>
+          <a href="https://github.com/manattan" target="_blank" class="tab"
+            >Github</a
+          >
         </li>
         <li>
-          <a href="https://www.wantedly.com/id/manattan" target="_blank" class="tab">Wantedly</a>
+          <a
+            href="https://www.wantedly.com/id/manattan"
+            target="_blank"
+            class="tab"
+            >Wantedly</a
+          >
         </li>
       </ul>
     </div>
@@ -27,7 +41,7 @@
 
 <script>
 export default {
-  name: "Tabmenu"
+  name: "Tabmenu",
 };
 </script>
 <style scoped>
