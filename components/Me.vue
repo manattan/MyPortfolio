@@ -49,10 +49,17 @@
             </div>
           </li>
           <li>
-            <p>2020.12 -</p>
+            <p>2020.12 - 2021.02</p>
             <div class="el">
               <span>👨‍💻</span>
               <span>株式会社filductインターン(フロントエンドエンジニア) </span>
+            </div>
+          </li>
+          <li>
+            <p>2021.02 -</p>
+            <div class="el">
+              <span>👨‍💻</span>
+              <span>株式会社AirX(フルスタックエンジニア) </span>
             </div>
           </li>
         </ul>
