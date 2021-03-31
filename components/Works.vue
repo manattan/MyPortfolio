@@ -29,7 +29,7 @@ export default {
           content:
             "各球団の背番号を検索するアプリケーションです。ログイン（twitter）することで、編集を管理人にリクエストすることができます。管理人はそのリクエストをmergeもしくはrejectできます。",
           subContents: [{ name: "React" }, { name: "Flask" }],
-          link: "https://tweet-web.netlify.app",
+          link: "https://search-npb.web.app/",
           github: [
             {
               url: "https://github.com/manattan/npb-front",
