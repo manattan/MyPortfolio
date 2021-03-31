@@ -24,6 +24,24 @@ export default {
       imgArcana: imgArcana,
       works: [
         {
+          name: "NPB-Search",
+          time: "2021-03",
+          content:
+            "各球団の背番号を検索するアプリケーションです。ログイン（twitter）することで、編集を管理人にリクエストすることができます。管理人はそのリクエストをmergeもしくはrejectできます。",
+          subContents: [{ name: "React" }, { name: "Flask" }],
+          link: "https://tweet-web.netlify.app",
+          github: [
+            {
+              url: "https://github.com/manattan/npb-front",
+              name: "Client",
+            },
+            {
+              url: "https://github.com/manattan/npb-server",
+              name: "Server",
+            },
+          ],
+        },
+        {
           name: "NPBscraper",
           time: "2021-01",
           content:
