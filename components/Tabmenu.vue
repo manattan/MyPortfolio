@@ -28,7 +28,7 @@
         </li>
         <li>
           <a
-            href="https://www.wantedly.com/id/manattan"
+            href="https://www.wantedly.com/id/takanori_mogi"
             target="_blank"
             class="tab"
             >Wantedly</a
