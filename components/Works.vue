@@ -113,23 +113,6 @@ export default {
           ],
         },
         {
-          name: "TodoApp",
-          time: "2020-07",
-          content:
-            "簡単なtodoアプリを作成しました（バグとか多いのでまだデプロイしてないです）。SPAでのログイン認証がまあまあ難しかった。レイアウトはまあまあよくできた。",
-          subContents: [{ name: "Vue" }, { name: "Express" }],
-          github: [
-            {
-              url: "https://github.com/manattan/todo-app/tree/master/frontend",
-              name: "Client",
-            },
-            {
-              url: "https://github.com/manattan/todo-app/tree/master/backend",
-              name: "Server",
-            },
-          ],
-        },
-        {
           name: "My PortFolio Site",
           time: "2020-05",
           content:
@@ -140,20 +123,6 @@ export default {
             {
               url: "https://github.com/manattan/MyPortfolio",
               name: "Client",
-            },
-          ],
-        },
-        {
-          name: "Mr. Schedule Adjustor",
-          time: "2020-04",
-          content:
-            "イベントを作成して日程調整できるアプリケーションです。全然使い物にならないので今後使えるようにしたいです。N予備校のプログラミング教材を進めながら作りました。Herokuで公開しています。",
-          subContents: [{ name: "Express" }],
-          link: "https://afternoon-inlet-59661.herokuapp.com/",
-          github: [
-            {
-              url: "https://github.com/manattan/Mr.-Schedule-Adjuster",
-              name: "Server",
             },
           ],
         },
