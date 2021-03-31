@@ -18,21 +18,21 @@
       <div id="sharebuttons">
         <a
           class="LINE_share"
-          :href="`https://social-plugins.line.me/lineit/share?url=https://blog.manattan.me/blogs/${post.fields.myWebSlug}&text=${post.fields.myWebTitle}`"
+          :href="`https://social-plugins.line.me/lineit/share?url=https://manattan.me/blogs/${post.fields.myWebSlug}&text=${post.fields.myWebTitle}`"
           target="_blank"
         >
           <img src="~/assets/LINE.png" class="sharebutton" />
         </a>
         <a
           class="FB_share"
-          :href="`https://www.facebook.com/sharer/sharer.php?u=https://blog.manattan.me/blogs/${post.fields.myWebSlug}`"
+          :href="`https://www.facebook.com/sharer/sharer.php?u=https://manattan.me/blogs/${post.fields.myWebSlug}`"
           target="_blank"
         >
           <img src="~/assets/Facebook.png" class="sharebutton" />
         </a>
         <a
           class="Twitter_share"
-          :href="`https://twitter.com/share?url=https://blog.manattan.me/blogs/${post.fields.myWebSlug}&text=${post.fields.myWebTitle}`"
+          :href="`https://twitter.com/share?url=https://manattan.me/blogs/${post.fields.myWebSlug}&text=${post.fields.myWebTitle}`"
           target="_blank"
         >
           <img src="~/assets/Twitter.png" class="sharebutton" />

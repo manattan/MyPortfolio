@@ -20,7 +20,7 @@ module.exports = {
       {
         hid: "og:url",
         property: "og:url",
-        content: "blog.manattan.me",
+        content: "manattan.me",
       },
       {
         hid: "og:description",

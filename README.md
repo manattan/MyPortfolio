@@ -1,4 +1,4 @@
 # MyWeb
-https://blog.manattan.me
+https://manattan.me
 
 Nuxt/SSR/Contentful
